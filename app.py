@@ -9,6 +9,7 @@ from dash import Dash, html, dcc, callback, Output, Input
 from dash import dcc, html
 import plotly.express as px
 app = Dash(__name__)
+server = app.server
 
 
 app.layout = html.Div([
