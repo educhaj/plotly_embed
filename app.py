@@ -32,6 +32,9 @@ def update_chart(selected_column):
     fig = px.histogram(df, x=selected_column, title='Course Enrollment',
                        histfunc="count", color=selected_column,
                        color_discrete_sequence=colors, text_auto=True)
+          
+          # Update the y-axis title
+    fig.update_layout(yaxis_title='Count')
     return fig
 
 if __name__ == '__main__':
