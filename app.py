@@ -29,7 +29,7 @@ app.layout = html.Div([
     Input('column-dropdown', 'value')
 )
 def update_chart(selected_column):
-    fig = px.histogram(df, x=selected_column, title='Course Enrollment',
+    fig = px.histogram(df, x=selected_column, title='Statewide Course Offerings By Grade',
                        histfunc="count", color=selected_column,
                        color_discrete_sequence=colors, text_auto=True)
           
