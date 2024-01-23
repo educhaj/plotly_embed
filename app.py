@@ -15,7 +15,7 @@ server = app.server
 app.layout = html.Div([
     dcc.Dropdown(
         id='column-dropdown',
-        options=[{'label': col, 'value': col} for col in df],
+        options=[{'label': col, 'value': col} for col in df.iloc[:, 1:]],
         value=df['Grade 4'],  # Default selected column
         multi=False  # Set to True if you want to allow multiple selections
     ),
